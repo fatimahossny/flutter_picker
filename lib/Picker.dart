@@ -131,12 +131,12 @@ class Picker {
 
   /// 生成picker控件
   /// Build picker control
-  Widget makePicker([ThemeData themeData, bool isModal = false]) {
+  Widget makePicker([ThemeData themeData, bool isModal = false,Key key]) {
     _maxLevel = adapter.maxLevel;
     adapter.picker = this;
     adapter.initSelects();
     _widget =
-        _PickerWidget(picker: this, themeData: themeData, isModal: isModal);
+        _PickerWidget(picker: this, themeData: themeData, isModal: isModal, key: key);
     return _widget;
   }
 
